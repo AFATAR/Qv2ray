@@ -114,7 +114,7 @@ jobs:
         run: |
           mkdir build
           cd build
-          cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0 -DCMAKE_OSX_ARCHITECTURES=amd64 -DDS_STORE_SCRIPT=ON
+          cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0 -DDS_STORE_SCRIPT=ON
           cmake --build . --parallel $(sysctl -n hw.logicalcpu)
           sudo cmake --install .
           appdmg ../assets/package_dmg.json ../Qv2ray.dmg
